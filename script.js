@@ -48,7 +48,7 @@ document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 
 /* Aberto agora (horário de Brasília) */
 (function(){
-  const sched = {1:[6,23],2:[6,23],3:[6,23],4:[6,23],5:[6,23],6:[8,16],0:[8,14]};
+  const sched = {1:[6,22],2:[6,22],3:[6,22],4:[6,22],5:[6,22],6:[8,16],0:[0,0]};
   const parts = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
   const get = t=>parts.find(p=>p.type===t).value;
   const day = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[get("weekday")];
